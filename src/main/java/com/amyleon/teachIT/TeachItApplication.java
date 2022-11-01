@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TeachItApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(TeachItApplication.class, args);
 	}
 

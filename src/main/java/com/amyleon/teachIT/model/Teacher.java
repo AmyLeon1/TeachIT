@@ -10,6 +10,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Optional;
 
 //serializable to make it easier to convert class to different types of String
 //allows it to connect to database we configure
@@ -38,15 +39,14 @@ public class Teacher implements Serializable, UserDetails {
 
     public Teacher(String firstName,
                    String lastName, String userName, String email, String password,
-                   AppUserRole appUserRole, Boolean locked, Boolean enabled) {
+                   AppUserRole appUserRole) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.email = email;
         this.password = password;
         this.appUserRole = appUserRole;
-        this.locked = locked;
-        this.enabled = enabled;
+
     }
 
     public long getId() {
@@ -162,5 +162,7 @@ public class Teacher implements Serializable, UserDetails {
 
     public void setId(String toString) {
     }
+
+
 }
 
